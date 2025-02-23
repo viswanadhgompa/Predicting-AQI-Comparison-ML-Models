@@ -1,7 +1,9 @@
+import os
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv("data set\\state_weather_aqi_data_mf2.csv")
+file_path = os.path.join("data set", "state_weather_aqi_data_mf2.csv")
+df = pd.read_csv(file_path)
 
 x1 = df.iloc[:,:12].values
 z1 = pd.DataFrame(x1)
